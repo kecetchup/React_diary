@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext , useEffect} from "react";
+import { setPageTitle } from "../util";
 import {DiaryDispatchContext} from "../App"
 import Button from "../component/Button";
 import Header from "../component/Header";
@@ -16,6 +17,9 @@ const New= () => {
         onCreate(date, content, emotionId);
         navigate("/",{replace : true});
     }
+    useEffect(()=>{
+        setPageTitle("새 일기 쓰기");
+    },[]);
     return (
     <div>
         <Header title={"새 읽기 쓰기"}

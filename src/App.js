@@ -51,7 +51,7 @@ function reducer(state,action){
     }
     case "DELETE":{
       const newState = state.filter(
-        (it) => String(it.id) !== String(action.targetId)
+        (it) => String(it.id) !== String(action.data.targetId)
       );
       localStorage.setItem("diary", JSON.stringify(newState));
       return newState;
