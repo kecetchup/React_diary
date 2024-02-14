@@ -8,6 +8,7 @@ import Edit from "./pages/Edit";
 
 export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
+
 const mockData = [
   {
     id: "mock1",
@@ -110,12 +111,6 @@ function App() {
               <Route path="/diary/:id" element={<Diary/>} />
               <Route path="/edit/:id" element={<Edit/>} />
             </Routes>
-            <div>
-              <Link to={"/"}>Home</Link>
-              <Link to={"/new"}>New</Link>
-              <Link to={"/diary"}>Diary</Link>
-              <Link to={"/edit"}>Edit</Link>
-            </div>
           </div>
         </DiaryDispatchContext.Provider>
       </DiaryStateContext.Provider>
